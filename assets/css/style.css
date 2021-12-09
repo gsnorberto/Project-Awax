@@ -1,4 +1,59 @@
 body{
-    margin: 0;
-    padding: 0
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/******************* HEADER *******************/
+header{
+    height: 100px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.header{
+    max-width: 1140px;
+    height: 100px;
+    margin: auto; /*Centralizar o conteúdo header*/
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+}
+.logo-img{
+    width: 80px;
+    height: 80px;
+    background-color: #B28756;
+}
+
+.menu{
+    flex: 1; /*Pega todo restante do espaço não ocupado pela logo*/
+    display: flex;
+    justify-content: flex-end;
+}
+.menu ul{
+    display: flex;
+}
+.menu li a{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex; /*Utilizado para aumentar a altura da caixa para estilização da borda inferior de navegação. OBS: O "a" por padrão tem display inline*/
+    align-items: center;
+    padding: 0 10px 0 10px;
+    height: 100px;
+    border-bottom: 5px solid #000000;
+}
+.menu .active a,
+.menu li a:hover{
+    border-bottom: 5px solid #B28756;
+    color: #CCCCCC ;
+}
+
+/******************** MAIN ********************/
+.banner{
+    height: calc(100vh - 100px); /* "100vh" cobre o espaço total visível (de acordo ao tamanho/resolução do monitor) logo ao abrir o site. "-100px" para tirar a diferença da altura do header */
+    background-color: #333333;
+    background-image: url('../img/bg.jpg');
+    background-size: cover; /* Ajusta a imagem de forma que ela preencha o espaço */
+    background-position: bottom; /* Prioriza a parte mais inferior da imagem*/
 }
