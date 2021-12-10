@@ -1,8 +1,11 @@
 body{
     font-family: 'Montserrat', Arial, sans-serif;
+    overflow-x: hidden; /*Todo conteúdo que ultrapassar a horizontal vai ser ignorado*/
 }
 
+/* ********************************************/
 /******************* HEADER *******************/
+/* ********************************************/
 header{
     height: 100px;
     background-color: #000000;
@@ -23,6 +26,7 @@ header{
     width: 80px;
     height: 80px;
     background-color: #B28756;
+    border-radius: 40px;
 }
 
 .menu{
@@ -49,11 +53,200 @@ header{
     color: #CCCCCC ;
 }
 
+/* ********************************************/
 /******************** MAIN ********************/
+/* ********************************************/
+
+/*----------------- BANNER -------------------*/
 .banner{
     height: calc(100vh - 100px); /* "100vh" cobre o espaço total visível (de acordo ao tamanho/resolução do monitor) logo ao abrir o site. "-100px" para tirar a diferença da altura do header */
     background-color: #333333;
     background-image: url('../img/bg.jpg');
     background-size: cover; /* Ajusta a imagem de forma que ela preencha o espaço */
     background-position: bottom; /* Prioriza a parte mais inferior da imagem*/
+    overflow: hidden; /*Tudo que passar do conteúdo dentro do elemento vai ser ignorado */
+}
+.banner .sliders{
+    width: 1000vw; /*Cada slide tem 100vw multiplicado por 10 (quantidade de slides) temos 1000vw*/
+    height: 100%;
+}
+.banner .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.banner .slide-area{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+.banner h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+.banner h1 span{
+    color: #B28756;
+}
+.banner h2{
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.banner .sliders-pointers{
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner .pointer{
+    height: 15px;
+    width: 15px;
+    border: 2px solid #b28756;
+    border-radius: 8px;
+    margin: 0 5px;
+    cursor: pointer; /*Efeito de Click*/
+}
+.banner .pointer.active{
+    background-color: #b28756;
+}
+
+/*----------------- DEFAULT -------------------*/
+.default{
+    padding: 50px 0;
+}
+.default .section-title{
+    font-size: 20px;
+    
+}
+.default .section-desc{
+    font-size: 12px;
+    color: #A9A9A9;
+    margin-top: 7px;
+    margin-bottom: 40px;
+}
+.default .section-title,
+.default .section-desc{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.default .section-body{
+    margin: auto;
+    max-width: 1140px;
+}
+.default.light{
+    background-color: #F7F7F7;
+}
+.default.light .section-title,
+.default.light .section-body{
+    color: #000000;
+}
+.default.dark{
+    background-color: #000000;
+}
+.default.dark .section-title,
+.default.dark .section-body{
+    color: #F7F7F7;
+}
+
+.button{
+    display: inline-block;
+    background-color: #b28756;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+
+
+/* 
+***************************************
+********* ÁREAS ESPECÍFICAS ***********
+***************************************
+*/
+/*------------ ABOUT US -------------*/
+.section-aboutus{
+    display: flex;
+}
+.section-aboutus--left{
+    flex: 1;
+}
+.section-aboutus--left p{
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 600;
+    text-align: justify;
+}
+.section-aboutus--right{
+    width: 550px;
+    text-align: center;
+}
+.section-aboutus--right img{
+    width: 480px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+/*------------ SERVICES -------------*/
+.section-services{
+    display: flex;
+}
+.section-service{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333333;
+    padding: 15px;
+}
+.section-service:first-child{
+    border-left: 1px solid #333333;
+}
+.section-service h4{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px
+}
+.section-service p{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999999;
+}
+/*------------ PROJECTS -------------*/
+.section-projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-projects-filters{
+    border: 1px solid #CCCCCC;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+}
+.section-projects-filters ul li{
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #CCCCCC;
+    color: #555555;
+    border-bottom: 3px solid #EEEEEE;
+    cursor: pointer;
+}
+.section-projects-filters .active,
+.section-projects-filters ul li:hover{
+    border-bottom: 3px solid #B28756;
+}
+.section-projects-filters ul li:first-child{
+    border-left: 0;
 }
