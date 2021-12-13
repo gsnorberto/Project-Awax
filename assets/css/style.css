@@ -166,7 +166,9 @@ header{
     margin-top: 20px;
     border-radius: 20px;
 }
-
+.button:hover{
+    background-color: #9b7448;
+}
 
 
 /* 
@@ -412,6 +414,7 @@ header{
     color: #A9A9A9;
     font-size: 12px;
     font-weight: 600;
+    line-height: 1.8;
 }
 .section-happyclients .sliders{
     width: 1000vw; /*Cada slide tem 100vw multiplicado por 10 (quantidade de slides) temos 1000vw*/
@@ -453,3 +456,123 @@ header{
 .section-happyclients-area .pointer.active{
     background-color: #b28756;
 }
+/*--------------------- COMPANIES BAR ------------------*/
+.section-companiesbar-area{
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    flex-wrap: wrap;
+}
+.section-companiesbar-area img{
+    width: 70px;
+    height: auto;
+    margin: 30px 30px 40px 30px;
+}
+/*--------------------- PRICE ------------------*/
+.section-prices{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.section-prices a{
+    background-color: #555555;
+}
+.section-prices a:hover,
+.section-prices a.active{
+    background-color: #B28756;
+}
+.section-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    background-color: #FFFFFF;
+    width: 230px;
+    height: 330px;
+    margin-right: 20px;
+}
+.section-price--category{
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.section-price--price{
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.section-price--month{
+    color: #A9A9A9;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.section-price--info{
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    color: #999999;
+}
+/*--------------------- PREMIUM ------------------*/
+.section-premium-contents{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px 0;
+    border-bottom: 1px solid #CCCCCC;
+    flex-wrap: wrap;
+}
+.section-premium-content{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-left: 30px;
+}
+.section-premium-content--right{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+.section-premium-content--desc{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.section-premium-content--desc h1{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.section-premium-content--desc p{
+    font-size: 13px;
+    color: #999999;
+    line-height: 1.8;
+}
+.section-premium-area .sliders-pointers{
+    margin-top: 30px;
+    height: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-premium-area .pointer{
+    height: 15px;
+    width: 15px;
+    border: 2px solid #b28756;
+    border-radius: 8px;
+    margin: 0 5px;
+    cursor: pointer; /*Efeito de Click*/
+}
+.section-premium-area .pointer.active{
+    background-color: #b28756;
+}
+.premium-area--button{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/* .section-premium-area .section-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
