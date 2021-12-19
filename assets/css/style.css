@@ -576,3 +576,111 @@ header{
     flex-direction: column;
     justify-content: center;
 } */
+/*------------------- SOME FACTS ----------------*/
+.section-someFacts{
+    display: flex;
+    justify-content:center;
+}
+.section-someFacts-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    max-width: 218px;
+}
+/* .section-someFacts-content{
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+} */
+.section-someFacts-content h4{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+.section-someFacts-content p{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999999;
+    text-align: center;
+}
+.someFacts--number{
+    font-size:50px;
+    font-weight: bold;
+    color: #b28756;
+}
+.someFacts--border{
+    width: 20px;
+    border: 2px solid #B28756;
+    text-align: center;
+    border-radius: 2px
+}
+/*----------------- CONTACTS BAR --------------*/
+.section-contactsBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.contactsBar--icon{
+    text-align: center;
+    margin-left: 5px;
+    margin: 10px 5px 10px 25px;
+    background-color: #B28756;
+    padding: 15px 15px;
+    border-radius: 40px;
+}
+.contactsBar--icon:hover{
+    background-color: #9b7448;
+    cursor: pointer;
+}
+
+.contactsBar--txtshare{
+    font-weight: 600;
+    color: #A9A9A9;
+    padding: 0 10px;
+}
+
+.contactsBar--count-twitter,
+.contactsBar--count-linkedin,
+.contactsBar--count-facebook,
+.contactsBar--count-googleplus,
+.contactsBar--count-pinterest{
+    color: #A9A9A9;
+    font-size: 12px;
+    font-weight: 600;
+}
+.section-contactUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+.section-contactUs input{
+    border: 0;
+    border-bottom: 2px solid #C0C0C0;
+    border-radius:2px;
+    background-color: #F7F7F7;
+    width: 500px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    color: #808080;
+}
+.section-contactUs input::placeholder{
+    color: #A9A9A9;
+    font-size: 13px;
+}
+.section-contactUs input:first-child{
+    float:left;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;   
+    outline: 0;
+    border-bottom: 2px solid #B28756;
+} 
+/*----------------- CONTACTS US --------------*/
