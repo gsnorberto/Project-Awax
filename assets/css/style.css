@@ -28,7 +28,9 @@ header{
     background-color: #B28756;
     border-radius: 40px;
 }
-
+.menu-opener{
+    display: none;
+}
 .menu{
     flex: 1; /*Pega todo restante do espaço não ocupado pela logo*/
     display: flex;
@@ -785,12 +787,22 @@ footer {
 /* ********* MEDIA CONTROLS ********/
 /***********************************/
 
+/* Tablet */
 @media(min-width: 450px) and (max-width: 800px){
+    .logo{
+        margin-left: 30px;
+    }
+
+    .menu-opener{
+        width: 45px;
+        margin-right: 30px;
+        display: block;
+    }
     nav{
-        /* display: none; */
+        display: none;
         position: absolute;
         z-index: 99;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.9);
         width: 70vw;
         height: calc(100vh - 100px);
         top: 100px;
@@ -802,7 +814,135 @@ footer {
 
     .menu li a {
         font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
     }
 
+    .menu li.active a{
+        border: 0;
+        color: #B28756;
+    }
     
+    .section-aboutus{
+        flex-direction: column;
+    }
+    .section-aboutus--left{
+        margin: 0 30px 30px 30px;
+    }
+    .section-aboutus--right{
+        width: auto;
+    }
+    .section-services{
+        flex-wrap: wrap;
+    }
+    .section-service{
+        min-width: 50%;
+
+    }
+    .section-projects--photos{
+        flex-wrap: wrap;
+    }
+    .section-projects--photo{
+        max-width: 50%;
+    }
+    .section-projects--photoarea{
+        width: 100%;
+        height: auto;
+    }
+    .section-projects--photoarea img{
+        width: 92%;
+    }
+    .section-aboutus--left{
+        text-align: center;
+    }
+
+    .section-team{
+        margin-left: 10px;
+        max-width: 580px;
+    }
+    .section-happyclients-area .slide-area{
+        width: 100vw;
+    }
+}
+
+/* SMARTPHONE */
+@media(max-width: 450px){
+    .logo{
+        margin-left: 30px;
+    }
+
+    .menu-opener{
+        width: 45px;
+        margin-right: 30px;
+        display: block;
+    }
+    nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+
+    .menu li.active a{
+        border: 0;
+        color: #B28756;
+    }
+    
+    .section-aboutus{
+        flex-direction: column;
+    }
+    .section-aboutus--left{
+        margin: 0 30px 30px 30px;
+    }
+    .section-aboutus--right{
+        width: auto;
+    }
+    .section-services{
+        flex-wrap: wrap;
+    }
+    .section-service{
+        min-width: 50%;
+
+    }
+    .section-projects--photos{
+        flex-wrap: wrap;
+    }
+    .section-projects--photo{
+        max-width: 50%;
+    }
+    .section-projects--photoarea{
+        width: 100%;
+        height: auto;
+    }
+    .section-projects--photoarea img{
+        width: 92%;
+    }
+    .section-aboutus--left{
+        text-align: center;
+    }
+
+    .section-team{
+        margin-left: 10px;
+        max-width: 580px;
+    }
+    .section-happyclients-area .slide-area{
+        width: 100vw;
+    }
 }
